@@ -9,7 +9,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.dagiel.config")
+@ComponentScan(basePackages = "com.dagiel")
 public class AppConfig {
     // define a bean for view resolver
 

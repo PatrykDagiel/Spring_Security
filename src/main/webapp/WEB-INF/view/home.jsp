@@ -1,11 +1,15 @@
 <html>
+
 <head>
-    Home Page
+    <title>Company Home Page</title>
 </head>
 
 <body>
-<h2>Home Page</h2>
+<h2>Company Home Page</h2>
 <hr>
-    Welcome to home page.
+
+Welcome to the company home page!
+
 </body>
+
 </html>

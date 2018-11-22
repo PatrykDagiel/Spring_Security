@@ -2,7 +2,7 @@ package com.dagiel.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class SpringDipatcherServerInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class SpringDispatcherServerInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     @Override
     protected Class<?>[] getRootConfigClasses() {

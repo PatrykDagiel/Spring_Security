@@ -27,14 +27,17 @@ public class AppConfig extends WebSecurityConfigurerAdapter {
 
         auth.inMemoryAuthentication()
                 .withUser(users.username("john").password("test123").roles("EMPLOYEE"))
-                .withUser(users.username("mary").password("test111").roles("MANAGER"))
-                .withUser(users.username("susan").password("test123").roles("ADMIN"));
+                .withUser(users.username("mary").password("test111").roles("MANAGER", "EMPLOYEE"))
+                .withUser(users.username("susan").password("test123").roles("ADMIN", "EMPLOYEE"));
 
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
+                .antMatchers("/").hasRole("EMPLOYEE")
+                .antMatchers("/leaders/**").hasRole("MANAGER")
+                .antMatchers("/sysadmins/**").hasRole("ADMIN")
         .anyRequest().authenticated()
         .and()
         .formLogin()

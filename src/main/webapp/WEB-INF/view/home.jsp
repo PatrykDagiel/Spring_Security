@@ -17,6 +17,13 @@
 
 <hr>
 
+<p>
+    <a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a>
+</p>
+<p>
+    <a href="${pageContext.request.contextPath}/sysadmins">Sysadmins Cruise</a>
+</p>
+
 <%-- display user name and role --%>
 <p>
     User: <security:authentication property="principal.username"/>

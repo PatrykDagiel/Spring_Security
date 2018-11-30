@@ -46,7 +46,9 @@ public class AppConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .and()
                 .logout()
-                .permitAll();
+                .permitAll()
+        .and()
+                .exceptionHandling().accessDeniedPage("/access-denied");
     }
 
     @Bean

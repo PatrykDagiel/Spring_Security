@@ -17,12 +17,19 @@
 
 <hr>
 
-<p>
-    <a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a>
-</p>
-<p>
-    <a href="${pageContext.request.contextPath}/sysadmins">Sysadmins Cruise</a>
-</p>
+
+<security:authorize access="hasRole('MANAGER')">
+    <p>
+        <a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a>
+    </p>
+</security:authorize>
+
+
+<security:authorize access="hasRole('ADMIN')">
+    <p>
+        <a href="${pageContext.request.contextPath}/sysadmins">Sysadmins Cruise</a>
+    </p>
+</security:authorize>
 
 <%-- display user name and role --%>
 <p>

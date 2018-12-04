@@ -47,6 +47,12 @@
 			<version>5.0.9.RELEASE</version>
 		</dependency>
 
+		<!-- MySQL -->
+
+
+		<!-- C3PO -->
+
+
 		<!-- Servlet, JSP and JSTL support -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
